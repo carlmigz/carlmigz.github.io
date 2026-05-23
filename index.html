@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Carlos Miguel Ramos — Flutter Developer</title>
+    <title>Carlos Ramos — Flutter Developer</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="portfolio-container">
       <nav class="navbar">
         <div class="nav-content">
-          <div class="logo">Carlos Miguel Ramos</div>
+         
           <ul class="nav-links">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -23,8 +23,8 @@
 
       <section id="home" class="hero">
         <div class="hero-content">
-          <h1>Hi, I'm Carlos Miguel Ramos</h1>
-          <p class="subtitle">Flutter Developer | Mobile App Enthusiast</p>
+          <h1>Hi, I'm <span style="font-weight:900">Carlos Miguel Ramos</span></h1>
+          <p class="subtitle"> <span class="highlight">Flutter Developer</span></p>
           <p class="description">Creating beautiful, performant mobile applications with Flutter</p>
           <button class="cta-button" id="cta-contact">Get In Touch</button>
         </div>
@@ -49,44 +49,46 @@
       <section id="skills" class="skills">
         <div class="section-content">
           <h2>Skills &amp; Expertise</h2>
-          <div class="skills-grid">
-            <div class="skill-card">
-              <h3>Languages &amp; Frameworks</h3>
-              <ul>
-                <li>Flutter &amp; Dart</li>
-                <li>Kotlin</li>
-                <li>Swift</li>
-                <li>JavaScript/TypeScript</li>
-              </ul>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <h3>Languages &amp; Frameworks</h3>
+                <ul class="skill-list">
+                  <li class="skill-item">Flutter &amp; Dart</li>
+                  <li class="skill-item">Kotlin</li>
+                  
+                </ul>
+              </div>
+
+              <div class="skill-card">
+                <h3>Mobile Development</h3>
+                <ul class="skill-list">
+                  <li class="skill-item">Android</li>
+                  <li class="skill-item">iOS</li>
+                  <li class="skill-item">Firebase Integration</li>
+                  <li class="skill-item">REST APIs</li>
+                </ul>
+              </div>
+
+              <div class="skill-card">
+                <h3>Architecture &amp; Patterns</h3>
+                <ul class="skill-list">
+                  <li class="skill-item">Clean Architecture</li>
+                  <li class="skill-item">Provider Pattern</li>
+                  <li class="skill-item">RxDart</li>
+                  <li class="skill-item">BLoC Pattern</li>
+                </ul>
+              </div>
+
+              <div class="skill-card">
+                <h3>Tools &amp; Platforms</h3>
+                <ul class="skill-list">
+                  <li class="skill-item">VS Code</li>
+                  <li class="skill-item">Android Studio</li>
+                  <li class="skill-item">GitHub</li>
+                  <li class="skill-item">Firebase</li>
+                </ul>
+              </div>
             </div>
-            <div class="skill-card">
-              <h3>Mobile Development</h3>
-              <ul>
-                <li>iOS Development</li>
-                <li>Android Development</li>
-                <li>Firebase Integration</li>
-                <li>REST APIs</li>
-              </ul>
-            </div>
-            <div class="skill-card">
-              <h3>Architecture &amp; Patterns</h3>
-              <ul>
-                <li>Clean Architecture</li>
-                <li>Provider Pattern</li>
-                <li>Riverpod</li>
-                <li>BLoC Pattern</li>
-              </ul>
-            </div>
-            <div class="skill-card">
-              <h3>Tools &amp; Platforms</h3>
-              <ul>
-                <li>VS Code</li>
-                <li>Android Studio</li>
-                <li>Git &amp; GitHub</li>
-                <li>Firebase</li>
-              </ul>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -96,44 +98,80 @@
           <div class="projects-grid">
             <div class="project-card">
               <div class="project-header">
-                <h3>Project Name</h3>
+                <h3>AYOS</h3>
                 <span class="project-badge">Flutter</span>
               </div>
-              <p>A brief description of your Flutter project, highlighting the key features and technologies used.</p>
+              <p>Home services booking app that connects users with vetted service providers for quick bookings.</p>
               <div class="tech-stack">
                 <span class="tech-tag">Flutter</span>
-                <span class="tech-tag">Dart</span>
                 <span class="tech-tag">Firebase</span>
               </div>
-              <a href="#" class="project-link">View Project →</a>
+              <a href="https://ayosph.com/" target="_blank" rel="noopener noreferrer" class="project-link">Visit AYOS →</a>
             </div>
 
             <div class="project-card">
               <div class="project-header">
-                <h3>Project Name</h3>
+                <h3>JCI Manila</h3>
                 <span class="project-badge">Flutter</span>
               </div>
-              <p>A brief description of your Flutter project, highlighting the key features and technologies used.</p>
+              <p>Event and project registration app for JCI Manila, with member management and event listings.</p>
               <div class="tech-stack">
                 <span class="tech-tag">Flutter</span>
-                <span class="tech-tag">Dart</span>
                 <span class="tech-tag">REST API</span>
               </div>
-              <a href="#" class="project-link">View Project →</a>
+              <a href="https://jcimanila.org/" target="_blank" rel="noopener noreferrer" class="project-link">Visit JCI Manila →</a>
             </div>
 
             <div class="project-card">
               <div class="project-header">
-                <h3>Project Name</h3>
+                <h3>PobCrawl</h3>
                 <span class="project-badge">Flutter</span>
               </div>
-              <p>A brief description of your Flutter project, highlighting the key features and technologies used.</p>
+              <p>Scan-and-register app used during party events to register JCI members quickly and securely.</p>
               <div class="tech-stack">
                 <span class="tech-tag">Flutter</span>
                 <span class="tech-tag">Dart</span>
-                <span class="tech-tag">SQLite</span>
               </div>
-              <a href="#" class="project-link">View Project →</a>
+              <a href="https://pobcrawl.com/" target="_blank" rel="noopener noreferrer" class="project-link">Visit PobCrawl →</a>
+            </div>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>CRC ACE</h3>
+                <span class="project-badge">Flutter</span>
+              </div>
+              <p>Learning platform for students with interactive quizzes, video lectures, and performance analytics.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Analytics</span>
+              </div>
+              <a href="https://crc-ace.com/" target="_blank" rel="noopener noreferrer" class="project-link">Visit CRC ACE →</a>
+            </div>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>LARO</h3>
+                <span class="project-badge">Flutter</span>
+              </div>
+              <p>Sports registration app for JCI members to join different games such as basketball and badminton.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Dart</span>
+              </div>
+              <a href="https://laro.com.ph/" target="_blank" rel="noopener noreferrer" class="project-link">Visit LARO →</a>
+            </div>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>BuildHub</h3>
+                <span class="project-badge">Flutter</span>
+              </div>
+              <p>E‑commerce app for ordering hardware supplies like cement and steels with streamlined checkout.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">E‑commerce</span>
+              </div>
+              <a href="https://buildhub.ph/" target="_blank" rel="noopener noreferrer" class="project-link">Visit BuildHub →</a>
             </div>
           </div>
         </div>
@@ -144,21 +182,17 @@
           <h2>Let's Connect</h2>
           <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
           <div class="contact-links">
-            <a href="mailto:your.email@example.com" class="contact-link">
+            <a href="mailto:ramos.carlosmiguel56@gmail.com" class="contact-link">
               <span class="icon">📧</span>
               <span>Email</span>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <a href="https://www.linkedin.com/in/itscarlmigz/" target="_blank" rel="noopener noreferrer" class="contact-link">
               <span class="icon">💼</span>
               <span>LinkedIn</span>
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <a href="https://github.com/carlmigz" target="_blank" rel="noopener noreferrer" class="contact-link">
               <span class="icon">🐙</span>
               <span>GitHub</span>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <span class="icon">𝕏</span>
-              <span>Twitter</span>
             </a>
           </div>
         </div>
