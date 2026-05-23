@@ -243,7 +243,7 @@ section h2 {
 }
 
 .tech-stack {
-    display: none;
+    display: none !important;
 }
 
 /* .tech-stack {
