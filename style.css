@@ -259,14 +259,47 @@ section h2 {
     font-size: 0.8rem
 }
 
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
 .project-link {
     color: var(--primary);
     font-weight: 700;
-    text-decoration: none
+    text-decoration: none;
+    padding: 0.45rem 0.75rem;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid rgba(4, 104, 215, 0.12);
+    transition: all 0.2s ease;
+}
+
+.store-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.store-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    color: var(--primary);
+}
+
+.store-icon svg {
+    width: 1.1rem;
+    height: 1.1rem;
 }
 
 .project-link:hover {
-    text-decoration: underline
+    text-decoration: none;
+    background: rgba(4, 104, 215, 0.08);
 }
 
 /* Contact */
