@@ -290,9 +290,6 @@ section h2 {
     width: 1.8rem;
     height: 1.8rem;
     color: var(--primary);
-    background: #fff;
-    border: 1px solid rgba(4, 104, 215, 0.08);
-    border-radius: 6px;
 }
 
 .store-icon svg {
@@ -330,8 +327,7 @@ section h2 {
 }
 
 .contact-link:hover {
-    box-shadow: 0 10px 30px rgba(4, 104, 215, 0.08);
-    transform: translateY(-4px)
+    background: rgba(4, 104, 215, 0.08);
 }
 
 /* Footer */

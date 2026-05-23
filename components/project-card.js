@@ -19,13 +19,6 @@ export function projectCard(project) {
 
       <div class="tech-stack">
 
-        ${project.tags
-          .map(tag => `
-            <span class="tech-tag">
-              ${tag}
-            </span>
-          `)
-          .join("")}
 
       </div>
 
