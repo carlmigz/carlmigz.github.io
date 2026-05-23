@@ -287,9 +287,12 @@ section h2 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1.8rem;
+    height: 1.8rem;
     color: var(--primary);
+    background: #fff;
+    border: 1px solid rgba(4, 104, 215, 0.08);
+    border-radius: 6px;
 }
 
 .store-icon svg {
