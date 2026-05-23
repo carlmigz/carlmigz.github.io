@@ -243,11 +243,15 @@ section h2 {
 }
 
 .tech-stack {
+    display: none;
+}
+
+/* .tech-stack {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
     margin-bottom: 0.5rem
-}
+} */
 
 .tech-tag {
     background: #fff;
@@ -311,12 +315,14 @@ section h2 {
 .contact-links {
     display: flex;
     gap: 1rem;
+    
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 1rem
 }
 
 .contact-link {
+    
     background: #fff;
     color: var(--primary);
     padding: 0.9rem 1rem;
