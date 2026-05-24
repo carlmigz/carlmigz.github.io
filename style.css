@@ -464,12 +464,46 @@ section h2 {
         flex: 0 1 calc(50% - 0.5rem)
     }
 
+    /* Mobile: stack timeline items as a vertical list */
+    .timeline-container {
+        display: block;
+        position: relative;
+        padding: 1rem 0.5rem 1rem 3rem;
+    }
+
+    /* Vertical connector line */
+    .timeline-container::before {
+        content: '';
+        position: absolute;
+        left: 28px;
+        top: 20px;
+        bottom: 20px;
+        width: 2px;
+        background: rgba(4, 104, 215, 0.18);
+        border-radius: 2px;
+    }
+
+    .timeline-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 0.5rem 0;
+        max-width: 100%;
+    }
+
+    .timeline-dot {
+        margin: 4px 0 0 0;
+        flex: 0 0 16px;
+        z-index: 2;
+    }
+
     .timeline-item:not(:last-child)::after {
         display: none
     }
 
     .timeline-content {
-        padding: 1rem
+        padding: 1rem;
+        flex: 1;
     }
 
     .timeline-title {
