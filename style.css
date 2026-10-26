@@ -7,7 +7,42 @@
     --primary-50: #e7f1ff;
     --muted: #4b5563;
     --bg: #ffffff;
+    --surface: #ffffff;
+    --text: #111;
+    --nav-text: #374151;
+    --on-primary: #fff;
+    --border: rgba(4, 104, 215, 0.08);
     --max-width: 1100px;
+    color-scheme: light;
+}
+
+/* Dark theme: explicit choice, or system preference when no choice is stored */
+:root[data-theme="dark"] {
+    --primary: #5b9dff;
+    --primary-50: #16233a;
+    --muted: #9ca3af;
+    --bg: #0f1623;
+    --surface: #182234;
+    --text: #e5e7eb;
+    --nav-text: #cbd5e1;
+    --on-primary: #0b1220;
+    --border: rgba(91, 157, 255, 0.18);
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --primary: #5b9dff;
+        --primary-50: #16233a;
+        --muted: #9ca3af;
+        --bg: #0f1623;
+        --surface: #182234;
+        --text: #e5e7eb;
+        --nav-text: #cbd5e1;
+        --on-primary: #0b1220;
+        --border: rgba(91, 157, 255, 0.18);
+        color-scheme: dark;
+    }
 }
 
 * {
@@ -23,7 +58,7 @@ html {
 body {
     font-family: 'Google Sans', Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
     line-height: 1.6;
-    color: #111;
+    color: var(--text);
     background: var(--bg)
 }
 
@@ -36,7 +71,7 @@ body {
 /* Navigation */
 .navbar {
     background: var(--bg);
-    border-bottom: 1px solid rgba(4, 104, 215, 0.08);
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 80
@@ -65,7 +100,7 @@ body {
 
 .nav-links a {
     
-    color: #374151;
+    color: var(--nav-text);
     text-decoration: none;
     font-weight: 600;
     padding: 0.25rem
@@ -118,7 +153,7 @@ body {
 
 .cta-button {
     background: var(--primary);
-    color: #fff;
+    color: var(--on-primary);
     border: 0;
     padding: 0.7rem 1.5rem;
     border-radius: 25px;
@@ -251,7 +286,7 @@ section h2 {
     background: var(--primary-50);
     padding: 1.25rem;
     border-radius: 10px;
-    border: 1px solid rgba(4, 104, 215, 0.08)
+    border: 1px solid var(--border)
 }
 
 .timeline-year {
@@ -285,7 +320,7 @@ section h2 {
     background: var(--primary-50);
     padding: 1rem;
     border-radius: 10px;
-    border: 1px solid rgba(4, 104, 215, 0.08)
+    border: 1px solid var(--border)
 }
 
 .project-header {
@@ -303,7 +338,7 @@ section h2 {
 
 .project-badge {
     background: var(--primary);
-    color: #fff;
+    color: var(--on-primary);
     padding: 0.25rem 0.6rem;
     border-radius: 999px;
     font-weight: 700;
@@ -327,8 +362,8 @@ section h2 {
 } */
 
 .tech-tag {
-    background: #fff;
-    border: 1px solid rgba(4, 104, 215, 0.08);
+    background: var(--surface);
+    border: 1px solid var(--border);
     color: var(--primary);
     padding: 0.25rem 0.5rem;
     border-radius: 6px;
@@ -349,7 +384,7 @@ section h2 {
     text-decoration: none;
     padding: 0.45rem 0.75rem;
     border-radius: 8px;
-    background: #fff;
+    background: var(--surface);
     border: 1px solid rgba(4, 104, 215, 0.12);
     transition: all 0.2s ease;
 }
@@ -396,7 +431,7 @@ section h2 {
 
 .contact-link {
     
-    background: #fff;
+    background: var(--surface);
     color: var(--primary);
     padding: 0.9rem 1rem;
     border-radius: 10px;
@@ -412,7 +447,7 @@ section h2 {
 /* Footer */
 .footer {
     background: var(--primary);
-    color: #fff;
+    color: var(--on-primary);
     text-align: center;
     padding: 1.25rem;
     font-weight: 700
@@ -513,4 +548,39 @@ section h2 {
     .timeline-desc {
         font-size: 0.85rem
     }
+}
+
+/* Theme toggle */
+.nav-content {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.theme-toggle {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px;
+    background: var(--surface);
+}
+
+.theme-toggle button {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.theme-toggle button:hover {
+    color: var(--primary);
+}
+
+.theme-toggle button[aria-pressed="true"] {
+    background: var(--primary);
+    color: var(--on-primary);
 }

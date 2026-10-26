@@ -84,3 +84,55 @@ document
       });
 
   });
+
+
+const themeButtons =
+  document.querySelectorAll("[data-theme-option]");
+
+function applyTheme(mode) {
+
+  if (mode === "light" || mode === "dark") {
+    document.documentElement.dataset.theme = mode;
+  } else {
+    mode = "system";
+    delete document.documentElement.dataset.theme;
+  }
+
+  themeButtons.forEach(button =>
+    button.setAttribute(
+      "aria-pressed",
+      String(button.dataset.themeOption === mode)
+    )
+  );
+
+  return mode;
+
+}
+
+let savedTheme = "system";
+
+try {
+  savedTheme =
+    localStorage.getItem("theme") || "system";
+} catch (e) {}
+
+applyTheme(savedTheme);
+
+themeButtons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const mode =
+      applyTheme(button.dataset.themeOption);
+
+    try {
+      if (mode === "system") {
+        localStorage.removeItem("theme");
+      } else {
+        localStorage.setItem("theme", mode);
+      }
+    } catch (e) {}
+
+  });
+
+});
