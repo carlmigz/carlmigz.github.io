@@ -1,41 +1,24 @@
 import { storeButton } from "./store-button.js";
 
 export function projectCard(project) {
+  const badge = project.category || "Flutter";
+  const actions = [
+    storeButton("android", project.android, project.title),
+    storeButton("ios", project.ios, project.title)
+  ]
+    .filter(Boolean)
+    .join("");
 
   return `
-    <div class="project-card">
-
+    <article class="project-card">
       <div class="project-header">
-
         <h3>${project.title}</h3>
-
-        <span class="project-badge">
-          Flutter
-        </span>
-
+        <span class="project-badge">${badge}</span>
       </div>
 
       <p>${project.description}</p>
 
-      <div class="tech-stack">
-
-
-      </div>
-
-      <div class="project-actions">
-
-        ${storeButton(
-          "android",
-          project.android
-        )}
-
-        ${storeButton(
-          "ios",
-          project.ios
-        )}
-
-      </div>
-
-    </div>
+      ${actions ? `<div class="project-actions">${actions}</div>` : ""}
+    </article>
   `;
 }
