@@ -1,4 +1,4 @@
-import { icons } from "./icons.js";
+import { icons } from "./icons.js?v=5";
 
 export function storeButton(type, url, projectTitle = "") {
   if (!url) return "";
@@ -22,7 +22,7 @@ export function storeButton(type, url, projectTitle = "") {
         ${isAndroid ? icons.android : icons.apple}
       </span>
       <span>${label}</span>
-      <span class="external-icon">${icons.external}</span>
+      ${icons.external ? `<span class="external-icon">${icons.external}</span>` : ""}
     </a>
   `;
 }

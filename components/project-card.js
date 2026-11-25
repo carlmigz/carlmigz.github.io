@@ -1,4 +1,4 @@
-import { storeButton } from "./store-button.js";
+import { storeButton } from "./store-button.js?v=5";
 
 export function projectCard(project) {
   const badge = project.category || "Flutter";

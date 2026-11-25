@@ -1,7 +1,13 @@
-import { projects } from "./data/projects.js";
-import { contacts, emailAddress } from "./data/contacts.js";
-import { projectCard } from "./components/project-card.js";
-import { contactLink } from "./components/contact-link.js";
+import { projects } from "./data/projects.js?v=5";
+import { contacts } from "./data/contacts.js?v=5";
+import { projectCard } from "./components/project-card.js?v=5";
+import { contactLink } from "./components/contact-link.js?v=5";
+
+const emailContact = contacts.find(contact => contact.url?.startsWith("mailto:"));
+const emailAddress =
+  emailContact?.url.replace(/^mailto:/i, "") ||
+  document.getElementById("copy-email-address")?.textContent?.trim() ||
+  "";
 
 /* ---------- Render dynamic sections ---------- */
 

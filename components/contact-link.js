@@ -1,4 +1,4 @@
-import { icons } from "./icons.js";
+import { icons } from "./icons.js?v=5";
 
 export function contactLink(contact) {
   const isExternal = /^https?:\/\//i.test(contact.url);
