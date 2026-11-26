@@ -17,12 +17,16 @@
     content="Flutter Developer building polished, performant Android and iOS applications with Clean Architecture, BLoC, and Firebase."
   />
   <meta property="og:url" content="https://carlmigz.github.io/" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://carlmigz.github.io/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Carlos Ramos | Flutter Developer" />
   <meta
     name="twitter:description"
     content="Flutter Developer building polished, performant Android and iOS applications."
   />
+  <meta name="twitter:image" content="https://carlmigz.github.io/og-image.png" />
 
   <title>Carlos Ramos | Flutter Developer</title>
 
@@ -49,7 +53,7 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
   />
 
-  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
 
 <body>
@@ -67,6 +71,7 @@
         <ul class="nav-links" id="nav-menu">
           <li><a href="#home" class="active" aria-current="location">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#timeline">Journey</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -74,6 +79,17 @@
         </ul>
 
         <div class="nav-controls">
+          <button
+            type="button"
+            class="cmd-trigger"
+            data-open-cmd
+            aria-label="Open quick command palette (Ctrl+K)"
+            title="Quick jump (Ctrl+K)"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <kbd class="cmd-kbd">Ctrl K</kbd>
+          </button>
+
           <div class="theme-toggle" role="radiogroup" aria-label="Color theme">
             <span class="theme-thumb" aria-hidden="true"></span>
             <button
@@ -128,45 +144,75 @@
 
     <main id="main-content">
       <section id="home" class="hero">
-        <div class="hero-content">
-          <div class="availability-badge">
-            <span class="status-dot" aria-hidden="true"></span>
-            Open to Flutter roles &amp; freelance
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <div class="availability-badge">
+              <span class="status-dot" aria-hidden="true"></span>
+              Open to Flutter roles &amp; freelance
+            </div>
+
+            <h1>
+              Hi, I'm
+              <span class="bold">Carlos Miguel Ramos</span>
+            </h1>
+
+            <p class="subtitle">
+              <span class="highlight">Flutter Developer</span>
+            </p>
+
+            <p class="description">
+              Creating beautiful, performant mobile applications for Android and
+              iOS with clean architecture and thoughtful UX.
+            </p>
+
+            <div class="hero-actions">
+              <a class="cta-button" href="#contact">Get In Touch</a>
+              <a class="cta-secondary" href="#projects">View Projects</a>
+              <button type="button" class="cta-ghost" data-open-resume>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span>Resume</span>
+              </button>
+            </div>
+
+            <ul class="hero-stats" aria-label="Portfolio highlights">
+              <li class="hero-stat">
+                <strong id="project-count">6</strong>
+                <span>Published Apps</span>
+              </li>
+              <li class="hero-stat">
+                <strong>Android &amp; iOS</strong>
+                <span>Cross-Platform</span>
+              </li>
+              <li class="hero-stat">
+                <strong>Clean Arch</strong>
+                <span>BLoC &amp; Firebase</span>
+              </li>
+            </ul>
           </div>
 
-          <h1>
-            Hi, I'm
-            <span class="bold">Carlos Miguel Ramos</span>
-          </h1>
+          <div class="hero-showcase" aria-label="Shipped Flutter app showcase">
+            <div class="phone-frame" id="hero-phone">
+              <div class="phone-status-bar" aria-hidden="true">
+                <span>9:41</span>
+                <span class="phone-notch"></span>
+                <span class="phone-signals">
+                  <span></span><span></span><span></span>
+                </span>
+              </div>
+              <div class="phone-screen" id="hero-phone-screen"></div>
+              <div class="phone-home-bar" aria-hidden="true"></div>
+            </div>
 
-          <p class="subtitle">
-            <span class="highlight">Flutter Developer</span>
-          </p>
-
-          <p class="description">
-            Creating beautiful, performant mobile applications for Android and
-            iOS with clean architecture and thoughtful UX.
-          </p>
-
-          <div class="hero-actions">
-            <a class="cta-button" href="#contact">Get In Touch</a>
-            <a class="cta-secondary" href="#projects">View Projects</a>
+            <div class="phone-controls">
+              <button type="button" class="phone-nav-btn" id="phone-prev" aria-label="Previous featured app">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <div class="phone-dots" id="phone-dots" role="tablist" aria-label="Choose app preview"></div>
+              <button type="button" class="phone-nav-btn" id="phone-next" aria-label="Next featured app">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
           </div>
-
-          <ul class="hero-stats" aria-label="Portfolio highlights">
-            <li class="hero-stat">
-              <strong id="project-count">6</strong>
-              <span>Published Apps</span>
-            </li>
-            <li class="hero-stat">
-              <strong>Android &amp; iOS</strong>
-              <span>Cross-Platform</span>
-            </li>
-            <li class="hero-stat">
-              <strong>Clean Arch</strong>
-              <span>BLoC &amp; Firebase</span>
-            </li>
-          </ul>
         </div>
       </section>
 
@@ -187,6 +233,17 @@
         </div>
       </section>
 
+      <section id="services" class="services">
+        <div class="section-content">
+          <h2>How I Can Help</h2>
+          <p class="section-subtitle">
+            End-to-end Flutter engineering for startups, teams, and freelance products.
+          </p>
+
+          <div class="services-grid" id="services-grid"></div>
+        </div>
+      </section>
+
       <section id="skills" class="skills">
         <div class="section-content">
           <h2>Skills &amp; Expertise</h2>
@@ -194,74 +251,7 @@
             Core technologies, patterns, and tools I use to ship production mobile apps.
           </p>
 
-          <div class="skills-grid">
-            <div class="skill-card">
-              <div class="skill-card-header">
-                <span class="skill-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                </span>
-                <h3>Core &amp; Frameworks</h3>
-              </div>
-
-              <ul class="skill-list">
-                <li class="skill-item">Flutter</li>
-                <li class="skill-item">Dart</li>
-                <li class="skill-item">REST APIs</li>
-                <li class="skill-item">UI/UX Design</li>
-              </ul>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-card-header">
-                <span class="skill-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
-                </span>
-                <h3>Mobile &amp; Backend</h3>
-              </div>
-
-              <ul class="skill-list">
-                <li class="skill-item">Android</li>
-                <li class="skill-item">iOS</li>
-                <li class="skill-item">Firebase</li>
-                <li class="skill-item">MySQL</li>
-              </ul>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-card-header">
-                <span class="skill-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-                </span>
-                <h3>Architecture &amp; State</h3>
-              </div>
-
-              <ul class="skill-list">
-                <li class="skill-item">Clean Architecture</li>
-                <li class="skill-item">BLoC</li>
-                <li class="skill-item">Riverpod &amp; Provider</li>
-                <li class="skill-item">RxDart</li>
-                <li class="skill-item">MVVM</li>
-              </ul>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-card-header">
-                <span class="skill-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                </span>
-                <h3>Tools &amp; Release</h3>
-              </div>
-
-              <ul class="skill-list">
-                <li class="skill-item">VS Code</li>
-                <li class="skill-item">Android Studio</li>
-                <li class="skill-item">Xcode</li>
-                <li class="skill-item">Figma</li>
-                <li class="skill-item">Git &amp; GitHub</li>
-                <li class="skill-item">Play &amp; App Store</li>
-              </ul>
-            </div>
-          </div>
+          <div class="skills-grid" id="skills-grid"></div>
         </div>
       </section>
 
@@ -272,51 +262,7 @@
             Key milestones across my growth as a cross-platform Flutter engineer.
           </p>
 
-          <ol class="timeline-container">
-            <li class="timeline-item">
-              <div class="timeline-dot" aria-hidden="true"></div>
-              <div class="timeline-content">
-                <div class="timeline-year">2023</div>
-                <div class="timeline-title">Flutter Fundamentals</div>
-                <div class="timeline-desc">
-                  Learned UI basics, Figma to Flutter conversion, and widget architecture.
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="timeline-dot" aria-hidden="true"></div>
-              <div class="timeline-content">
-                <div class="timeline-year">2024</div>
-                <div class="timeline-title">Clean Architecture</div>
-                <div class="timeline-desc">
-                  Mastered code organization, design patterns, and scalable project structure.
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="timeline-dot" aria-hidden="true"></div>
-              <div class="timeline-content">
-                <div class="timeline-year">2025</div>
-                <div class="timeline-title">API Integration</div>
-                <div class="timeline-desc">
-                  Integrated REST APIs, state management, and real-world data handling.
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline-item current">
-              <div class="timeline-dot" aria-hidden="true"></div>
-              <div class="timeline-content">
-                <div class="timeline-year">2026+</div>
-                <div class="timeline-title">Advanced &amp; AI</div>
-                <div class="timeline-desc">
-                  Exploring advanced Flutter performance and AI integration capabilities.
-                </div>
-              </div>
-            </li>
-          </ol>
+          <ol class="timeline-container" id="timeline-list"></ol>
         </div>
       </section>
 
@@ -324,10 +270,44 @@
         <div class="section-content">
           <h2>Featured Flutter Projects</h2>
           <p class="section-subtitle">
-            Production mobile apps shipped across Google Play and the App Store.
+            Production mobile apps shipped across Google Play and the App Store. Click Details &amp; QR to inspect or scan directly onto your phone.
           </p>
 
+          <div class="project-filters" id="project-filters" role="group" aria-label="Filter projects by category"></div>
           <div class="projects-grid" id="projects-grid"></div>
+        </div>
+      </section>
+
+      <section id="opensource" class="opensource">
+        <div class="section-content">
+          <h2>Open Source on GitHub</h2>
+          <p class="section-subtitle">
+            Public repositories and experiments synced directly from GitHub.
+          </p>
+
+          <div class="repos-grid" id="repos-grid"></div>
+
+          <div class="section-cta-wrap">
+            <a
+              href="https://github.com/carlmigz?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cta-secondary"
+            >
+              Browse all on GitHub &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="testimonials" hidden>
+        <div class="section-content">
+          <h2>What People Say</h2>
+          <p class="section-subtitle">
+            Feedback from clients and teammates I have built apps with.
+          </p>
+
+          <div class="testimonials-grid" id="testimonials-grid"></div>
         </div>
       </section>
 
@@ -349,6 +329,49 @@
             </button>
             <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
           </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <h3>Send a Quick Inquiry</h3>
+
+            <fieldset class="inquiry-types">
+              <legend class="sr-only">Inquiry type</legend>
+              <label class="inquiry-pill">
+                <input type="radio" name="inquiryType" value="Full-time Role" checked />
+                <span>Full-time Role</span>
+              </label>
+              <label class="inquiry-pill">
+                <input type="radio" name="inquiryType" value="Freelance Project" />
+                <span>Freelance Project</span>
+              </label>
+              <label class="inquiry-pill">
+                <input type="radio" name="inquiryType" value="Collaboration" />
+                <span>Collaboration</span>
+              </label>
+            </fieldset>
+
+            <div class="form-row">
+              <label class="form-field">
+                <span>Name</span>
+                <input type="text" name="name" id="contact-name" required autocomplete="name" placeholder="Your name" />
+              </label>
+              <label class="form-field">
+                <span>Email</span>
+                <input type="email" name="email" id="contact-email" required autocomplete="email" placeholder="you@example.com" />
+              </label>
+            </div>
+
+            <label class="form-field">
+              <span>Message</span>
+              <textarea name="message" id="contact-message" rows="4" required placeholder="Tell me about your role, app idea, or timeline..."></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="cta-button" id="contact-submit">
+                Send Inquiry
+              </button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
         </div>
       </section>
     </main>
@@ -357,14 +380,77 @@
   <footer class="footer">
     <div class="footer-content">
       <p>&copy; <span id="footer-year">2026</span> Carlos Miguel Ramos</p>
-      <a href="#home" class="back-to-top">
-        <span>Back to top</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-      </a>
+      <div class="footer-actions">
+        <button type="button" class="footer-cmd-hint" data-open-cmd>
+          Quick jump <kbd>Ctrl K</kbd>
+        </button>
+        <a href="#home" class="back-to-top">
+          <span>Back to top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </a>
+      </div>
     </div>
   </footer>
 
-  <script type="module" src="script.js?v=5"></script>
+  <!-- Project Case-Study & QR Modal -->
+  <dialog class="modal-dialog project-modal" id="project-modal" aria-labelledby="project-modal-title">
+    <div class="modal-surface">
+      <div class="modal-header">
+        <div>
+          <span class="project-badge" id="project-modal-badge"></span>
+          <h3 id="project-modal-title"></h3>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close project details">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="project-modal-body"></div>
+    </div>
+  </dialog>
+
+  <!-- Printable Resume Preview Modal -->
+  <dialog class="modal-dialog resume-modal" id="resume-modal" aria-labelledby="resume-modal-title">
+    <div class="modal-surface">
+      <div class="modal-header">
+        <h3 id="resume-modal-title">Resume &mdash; Carlos Miguel Ramos</h3>
+        <div class="modal-header-actions">
+          <a id="resume-download-link" class="resume-action-btn" download hidden>Download PDF</a>
+          <button type="button" class="resume-action-btn primary" id="print-resume-btn">Print / Save PDF</button>
+          <button type="button" class="modal-close" data-close-modal aria-label="Close resume">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body" id="resume-modal-body"></div>
+    </div>
+  </dialog>
+
+  <!-- Quick Command Palette (Ctrl+K / Cmd+K) -->
+  <dialog class="modal-dialog cmd-dialog" id="cmd-palette" aria-label="Quick command palette">
+    <div class="modal-surface cmd-surface">
+      <div class="cmd-input-row">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input
+          type="search"
+          id="cmd-input"
+          autocomplete="off"
+          placeholder="Jump to a section, open an app, or run an action..."
+          aria-label="Search portfolio commands"
+        />
+        <button type="button" class="modal-close" data-close-modal aria-label="Close command palette">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+        </button>
+      </div>
+      <ul class="cmd-list" id="cmd-list" role="listbox"></ul>
+      <div class="cmd-footer" aria-hidden="true">
+        <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> Navigate</span>
+        <span><kbd>&crarr;</kbd> Select</span>
+        <span><kbd>Esc</kbd> Close</span>
+      </div>
+    </div>
+  </dialog>
+
+  <script type="module" src="script.js?v=6"></script>
 </body>
 
 </html>
